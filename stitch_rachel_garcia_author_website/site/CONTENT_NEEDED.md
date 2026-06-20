@@ -5,7 +5,6 @@ The Stitch export contains temporary imagery and several unverified details. Con
 - Final author portrait and approved short/long biography
 - Final book covers, descriptions, release dates, and retailer URLs
 - Public contact email and any agent, press, or rights contacts
-- Newsletter provider and signup form/action URL
 - Approved social profiles beyond `@rachel.likes.coffee`
 - Testimonials and attribution; none were carried over because the export appears to contain generated placeholder quotes
 - Privacy policy if analytics, a contact form, or newsletter signup is enabled
