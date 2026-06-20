@@ -91,7 +91,7 @@ p { margin: 0; }
 .newsletter-page { min-height: calc(100vh - 220px); display: grid; grid-template-columns: .9fr 1.1fr; align-items: center; gap: clamp(3rem, 8vw, 7rem); padding-block: clamp(4rem, 9vw, 8rem); }
 .newsletter-copy { display: grid; gap: 1.4rem; }
 .newsletter-card { border: 1px solid var(--line); background: var(--panel); padding: clamp(1rem, 3vw, 2rem); }
-.substack-frame { display: block; width: 100%; height: 320px; border: 0; background: #fff; }
+.substack-frame { display: block; width: 100%; height: 320px; border: 0; background: var(--ink); filter: invert(1) hue-rotate(180deg); }
 .newsletter-privacy { margin-top: 1rem; color: #9a8e89; font-size: .8rem; text-align: center; }
 .newsletter-privacy a { text-underline-offset: .25rem; }
 .site-footer { padding-block: 2.5rem; }
