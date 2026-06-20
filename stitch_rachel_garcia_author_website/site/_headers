@@ -6,10 +6,10 @@
   X-Frame-Options: DENY
 
 /*.css
-  Cache-Control: public, max-age=604800
+  Cache-Control: public, max-age=0, must-revalidate
 
 /*.js
-  Cache-Control: public, max-age=604800
+  Cache-Control: public, max-age=0, must-revalidate
 
 /social-card.png
   Cache-Control: public, max-age=2592000
