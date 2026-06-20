@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=Hanken+Grotesk:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+                  "on-secondary": "#52211c",
+                  "surface-container-high": "#232c1f",
+                  "surface-container-lowest": "#081006",
+                  "secondary-container": "#703933",
+                  "secondary-fixed": "#ffdad5",
+                  "primary-fixed-dim": "#d2c3bd",
+                  "primary-fixed": "#efdfd9",
+                  "on-error-container": "#ffdad6",
+                  "jedi-night": "#070F05",
+                  "inverse-primary": "#675c57",
+                  "on-background": "#dbe6d2",
+                  "error": "#ffb4ab",
+                  "black-stallion": "#0F1E1D",
+                  "surface": "#0d160a",
+                  "background": "#0d160a",
+                  "tertiary": "#e2bfb2",
+                  "outline": "#9a8e89",
+                  "surface-tint": "#d2c3bd",
+                  "on-error": "#690005",
+                  "secondary-fixed-dim": "#ffb4aa",
+                  "on-primary-container": "#473d39",
+                  "on-tertiary-container": "#523a30",
+                  "surface-container": "#192216",
+                  "primary-container": "#b6a8a2",
+                  "tertiary-container": "#c5a497",
+                  "tertiary-fixed": "#ffdbcd",
+                  "on-surface": "#dbe6d2",
+                  "error-container": "#93000a",
+                  "english-breakfast": "#471914",
+                  "inverse-on-surface": "#2a3326",
+                  "walnut": "#3F2920",
+                  "primary": "#d2c3bd",
+                  "outline-variant": "#4e4541",
+                  "on-primary-fixed-variant": "#4f4540",
+                  "on-secondary-container": "#f1a59b",
+                  "on-secondary-fixed": "#370d09",
+                  "on-tertiary-fixed-variant": "#5a4137",
+                  "surface-container-highest": "#2e372a",
+                  "on-secondary-fixed-variant": "#6d3730",
+                  "surface-dim": "#0d160a",
+                  "secondary": "#ffb4aa",
+                  "on-primary": "#382e2a",
+                  "martini": "#B6A8A2",
+                  "surface-bright": "#323c2e",
+                  "surface-container-low": "#151e12",
+                  "on-primary-fixed": "#221a16",
+                  "on-surface-variant": "#d1c4be",
+                  "inverse-surface": "#dbe6d2",
+                  "tertiary-fixed-dim": "#e2bfb2",
+                  "on-tertiary-fixed": "#2a170f",
+                  "surface-variant": "#2e372a",
+                  "on-tertiary": "#412b22"
+          },
+          "borderRadius": {
+                  "DEFAULT": "0.25rem",
+                  "lg": "0.5rem",
+                  "xl": "0.75rem",
+                  "full": "9999px"
+          },
+          "spacing": {
+                  "stack-md": "16px",
+                  "stack-lg": "32px",
+                  "section-gap": "120px",
+                  "margin-desktop": "64px",
+                  "stack-sm": "8px",
+                  "container-max": "1280px",
+                  "gutter": "24px",
+                  "margin-mobile": "20px"
+          },
+          "fontFamily": {
+                  "quote": ["Playfair Display"],
+                  "label-caps": ["Hanken Grotesk"],
+                  "headline-display": ["Playfair Display"],
+                  "headline-lg-mobile": ["Playfair Display"],
+                  "body-md": ["Hanken Grotesk"],
+                  "body-lg": ["Hanken Grotesk"],
+                  "headline-md": ["Playfair Display"],
+                  "headline-lg": ["Playfair Display"]
+          },
+          "fontSize": {
+                  "quote": ["24px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                  "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                  "headline-display": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                  "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                  "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                  "body-lg": ["20px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                  "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                  "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    body {
+      background-color: #0d160a;
+      color: #dbe6d2;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #081006;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #471914;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-english-breakfast selection:text-martini">
+<!-- TopAppBar -->
+<header class="bg-jedi-night/90 backdrop-blur-md text-martini docked full-width top-0 sticky z-50 border-b border-english-breakfast/30">
+<div class="flex flex-col items-center w-full py-6 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="w-full flex justify-between items-center mb-6">
+<h1 class="font-headline-display text-headline-md tracking-widest text-martini uppercase">RACHEL GARCIA</h1>
+<div class="flex gap-stack-md">
+<span class="material-symbols-outlined cursor-pointer hover:text-tertiary transition-all duration-300" data-icon="mail">mail</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-tertiary transition-all duration-300 md:hidden" data-icon="menu">menu</span>
+</div>
+</div>
+<nav class="hidden md:flex gap-gutter">
+<a class="font-label-caps text-label-caps text-martini/60 hover:text-martini transition-colors" href="#">Home</a>
+<a class="font-label-caps text-label-caps text-martini border-b border-martini pb-1" href="#">Books</a>
+<a class="font-label-caps text-label-caps text-martini/60 hover:text-martini transition-colors" href="#">Bio</a>
+<a class="font-label-caps text-label-caps text-martini/60 hover:text-martini transition-colors" href="#">Events</a>
+<a class="font-label-caps text-label-caps text-martini/60 hover:text-martini transition-colors" href="#">Newsletter</a>
+<a class="font-label-caps text-label-caps text-martini/60 hover:text-martini transition-colors" href="#">Contact</a>
+</nav>
+</div>
+</header>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg">
+<!-- Hero / Title Section -->
+<section class="py-stack-lg mb-stack-lg border-b border-english-breakfast/10">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-martini mb-stack-md">The Bibliography</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+        Explore a curated collection of psychological thrillers, gothic mysteries, and atmospheric tales woven from the shadows of the human experience.
+      </p>
+</section>
+<!-- Filters Section -->
+<div class="flex flex-wrap gap-stack-md mb-section-gap">
+<button class="bg-martini text-jedi-night px-6 py-2 rounded-DEFAULT font-label-caps text-label-caps hover:bg-english-breakfast hover:text-martini transition-all duration-300">All Works</button>
+<button class="border border-martini text-martini px-6 py-2 rounded-DEFAULT font-label-caps text-label-caps hover:bg-english-breakfast transition-all duration-300">Upcoming</button>
+<button class="border border-martini text-martini px-6 py-2 rounded-DEFAULT font-label-caps text-label-caps hover:bg-english-breakfast transition-all duration-300">Trilogies</button>
+<button class="border border-martini text-martini px-6 py-2 rounded-DEFAULT font-label-caps text-label-caps hover:bg-english-breakfast transition-all duration-300">Standalone</button>
+</div>
+<!-- Books Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Book 1: By Oath And Blood -->
+<div class="md:col-span-8 bg-black-stallion border border-martini/10 p-stack-lg group hover:border-martini/30 transition-all duration-500 overflow-hidden relative">
+<div class="flex flex-col md:flex-row gap-stack-lg">
+<div class="md:w-1/2 overflow-hidden">
+<img alt="By Oath And Blood" class="w-full h-auto grayscale group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLtzd__TUK2iPv1YsxqE6kJi0bbe97AHZNhsB-f3UcxqkafbbYp1-S7vtGhgeMo3g0xm4-W0eFRcoit9klUvXqWcLwDDP09qUbWH_Anbdr9uYhcZxtp-sBz2tB_dV1JcFu4-TKlsHSZr-3c4FEp7htxjffbkN4kDtxErbFzOa8PFoNCFU8aPZnbyGHsNDo7Ok4iiMwcqo7DSlfQtLZpTaeLCggzwugpfP7e6M8XpYejQThcqLKd3_VrGjr9ccWl-aVM0_14_rnZ6PF"/>
+</div>
+<div class="md:w-1/2 flex flex-col justify-center">
+<div class="flex gap-2 mb-stack-md">
+<span class="bg-walnut text-martini px-3 py-1 rounded-DEFAULT font-label-caps text-[10px]">Trilogy Book 1</span>
+<span class="bg-english-breakfast/50 text-martini px-3 py-1 rounded-DEFAULT font-label-caps text-[10px]">Gothic Thriller</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-martini mb-stack-sm">By Oath And Blood</h3>
+<p class="font-label-caps text-[11px] text-martini/60 mb-stack-sm tracking-widest uppercase">Amidst The Shadows Trilogy</p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-lg">
+              The beginning of a haunting journey where old debts are reclaimed in the dark.
+            </p>
+<div class="flex flex-wrap gap-3 items-center">
+<span class="font-label-caps text-[10px] text-martini/40 uppercase">Buy on:</span>
+<a class="font-label-caps text-label-caps text-martini hover:text-tertiary transition-colors border-b border-martini/20 pb-0.5" href="#">Amazon</a>
+<a class="font-label-caps text-label-caps text-martini hover:text-tertiary transition-colors border-b border-martini/20 pb-0.5" href="#">Barnes &amp; Noble</a>
+<a class="font-label-caps text-label-caps text-martini hover:text-tertiary transition-colors border-b border-martini/20 pb-0.5" href="#">Bookshop</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Book 2: By Love And Death -->
+<div class="md:col-span-4 bg-black-stallion border border-martini/10 p-stack-md group hover:border-martini/30 transition-all duration-500">
+<div class="mb-stack-md aspect-[2/3] overflow-hidden">
+<img alt="By Love And Death" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLtzd__TUK2iPv1YsxqE6kJi0bbe97AHZNhsB-f3UcxqkafbbYp1-S7vtGhgeMo3g0xm4-W0eFRcoit9klUvXqWcLwDDP09qUbWH_Anbdr9uYhcZxtp-sBz2tB_dV1JcFu4-TKlsHSZr-3c4FEp7htxjffbkN4kDtxErbFzOa8PFoNCFU8aPZnbyGHsNDo7Ok4iiMwcqo7DSlfQtLZpTaeLCggzwugpfP7e6M8XpYejQThcqLKd3_VrGjr9ccWl-aVM0_14_rnZ6PF"/>
+</div>
+<h4 class="font-headline-md text-[24px] text-martini mb-1">By Love And Death</h4>
+<p class="font-label-caps text-[10px] text-martini/50 mb-3 tracking-widest uppercase">Amidst The Shadows Trilogy</p>
+<p class="font-body-md text-sm text-on-surface-variant/70 mb-4">The stakes intensify as the line between devotion and destruction blurs.</p>
+<div class="flex flex-wrap gap-x-4 gap-y-2 mt-auto">
+<a class="font-label-caps text-label-caps text-martini/60 hover:text-martini underline decoration-martini/30 underline-offset-4" href="#">Amazon</a>
+<a class="font-label-caps text-label-caps text-martini/60 hover:text-martini underline decoration-martini/30 underline-offset-4" href="#">B&amp;N</a>
+<a class="font-label-caps text-label-caps text-martini/60 hover:text-martini underline decoration-martini/30 underline-offset-4" href="#">Bookshop</a>
+</div>
+</div>
+<!-- Book 3: The Eternal Bargain -->
+<div class="md:col-span-6 bg-black-stallion border border-martini/10 p-stack-md group hover:border-martini/30 transition-all duration-500">
+<div class="flex flex-col sm:flex-row gap-stack-md">
+<div class="sm:w-1/3 aspect-[2/3] overflow-hidden">
+<img alt="The Eternal Bargain" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLtzd__TUK2iPv1YsxqE6kJi0bbe97AHZNhsB-f3UcxqkafbbYp1-S7vtGhgeMo3g0xm4-W0eFRcoit9klUvXqWcLwDDP09qUbWH_Anbdr9uYhcZxtp-sBz2tB_dV1JcFu4-TKlsHSZr-3c4FEp7htxjffbkN4kDtxErbFzOa8PFoNCFU8aPZnbyGHsNDo7Ok4iiMwcqo7DSlfQtLZpTaeLCggzwugpfP7e6M8XpYejQThcqLKd3_VrGjr9ccWl-aVM0_14_rnZ6PF"/>
+</div>
+<div class="sm:w-2/3 flex flex-col justify-center">
+<h4 class="font-headline-md text-[24px] text-martini mb-1">The Eternal Bargain</h4>
+<p class="font-label-caps text-[10px] text-martini/50 mb-3 tracking-widest uppercase">Historical Fantasy Novella</p>
+<p class="font-body-md text-sm text-on-surface-variant/70 mb-6">A compact, chilling tale of a pact made across time and the high cost of immortality.</p>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-martini/40" data-icon="shopping_cart">shopping_cart</span>
+<a class="font-label-caps text-label-caps text-martini hover:text-tertiary transition-colors" href="#">Available only on Amazon</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Book 4: Untitled Third Book -->
+<div class="md:col-span-6 bg-surface-container border border-english-breakfast/20 p-stack-md group relative overflow-hidden">
+<div class="flex flex-col sm:flex-row gap-stack-md opacity-40 grayscale pointer-events-none">
+<div class="sm:w-1/3 aspect-[2/3] overflow-hidden bg-black-stallion flex items-center justify-center">
+<img alt="Untitled Third Book" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLtzd__TUK2iPv1YsxqE6kJi0bbe97AHZNhsB-f3UcxqkafbbYp1-S7vtGhgeMo3g0xm4-W0eFRcoit9klUvXqWcLwDDP09qUbWH_Anbdr9uYhcZxtp-sBz2tB_dV1JcFu4-TKlsHSZr-3c4FEp7htxjffbkN4kDtxErbFzOa8PFoNCFU8aPZnbyGHsNDo7Ok4iiMwcqo7DSlfQtLZpTaeLCggzwugpfP7e6M8XpYejQThcqLKd3_VrGjr9ccWl-aVM0_14_rnZ6PF"/>
+</div>
+<div class="sm:w-2/3 flex flex-col justify-center">
+<h4 class="font-headline-md text-[24px] text-martini mb-1">Untitled Third Book</h4>
+<p class="font-label-caps text-[10px] text-martini/50 mb-3 tracking-widest uppercase">Concluding the Trilogy</p>
+<p class="font-body-md text-sm text-on-surface-variant/70 mb-4">The final chapter in the Amidst The Shadows saga. Secrets will be unmasked.</p>
+</div>
+</div>
+<div class="absolute inset-0 flex items-center justify-center bg-jedi-night/60 backdrop-blur-[2px]">
+<div class="text-center">
+<span class="font-label-caps text-label-caps text-martini block mb-2 uppercase tracking-[0.2em]">Coming August 2026</span>
+<div class="w-12 h-[1px] bg-martini/30 mx-auto"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Newsletter Section -->
+<section class="mt-section-gap py-section-gap bg-black-stallion border-t border-english-breakfast/20 text-center">
+<div class="max-w-xl mx-auto px-margin-mobile">
+<span class="font-label-caps text-label-caps text-martini mb-4 block uppercase tracking-widest">Stay in the Shadows</span>
+<h3 class="font-headline-md text-headline-md text-martini mb-stack-md">Join the Inner Circle</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-lg">
+          Receive monthly dispatches on upcoming releases, exclusive excerpts, and the inspirations behind the stories.
+        </p>
+<form class="flex flex-col md:flex-row gap-4">
+<input class="flex-grow bg-transparent border-b border-martini/30 focus:border-martini text-martini font-label-caps text-label-caps p-2 outline-none transition-all placeholder:text-martini/40" placeholder="YOUR EMAIL ADDRESS" type="email"/>
+<button class="bg-martini text-jedi-night px-8 py-3 font-label-caps text-label-caps hover:bg-english-breakfast hover:text-martini transition-all duration-300" type="submit">Subscribe</button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-jedi-night border-t border-english-breakfast/20 w-full mt-section-gap">
+<div class="flex flex-col md:flex-row justify-between items-center py-stack-lg px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto gap-stack-lg">
+<div class="flex flex-col items-center md:items-start">
+<span class="font-headline-md text-martini mb-2">RACHEL GARCIA</span>
+<p class="font-body-md text-body-md text-martini/50">© 2024 Rachel Garcia. All Rights Reserved.</p>
+</div>
+<div class="flex gap-gutter">
+<a class="font-label-caps text-label-caps text-martini/50 hover:text-secondary transition-colors" href="#">Privacy Policy</a>
+<a class="font-label-caps text-label-caps text-martini/50 hover:text-secondary transition-colors" href="#">Terms of Service</a>
+<a class="font-label-caps text-label-caps text-martini/50 hover:text-secondary transition-colors" href="#">Mailing List</a>
+</div>
+<div class="flex gap-stack-md">
+<span class="material-symbols-outlined text-martini/50 hover:text-martini hover:scale-110 cursor-pointer transition-all" data-icon="share">share</span>
+<span class="material-symbols-outlined text-martini/50 hover:text-martini hover:scale-110 cursor-pointer transition-all" data-icon="rss_feed">rss_feed</span>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,7 @@
+.agents/
+.tools/
+.wrangler/
+stitch_rachel_garcia_author_website/site/lighthouse-reports/
+*.log
+.DS_Store
+Thumbs.db

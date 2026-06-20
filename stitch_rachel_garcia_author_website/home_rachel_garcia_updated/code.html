@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Hanken+Grotesk:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #070F05;
+            color: #dbe6d2;
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary": "#52211c",
+                        "surface-container-high": "#232c1f",
+                        "surface-container-lowest": "#081006",
+                        "secondary-container": "#703933",
+                        "secondary-fixed": "#ffdad5",
+                        "primary-fixed-dim": "#d2c3bd",
+                        "primary-fixed": "#efdfd9",
+                        "on-error-container": "#ffdad6",
+                        "jedi-night": "#070F05",
+                        "inverse-primary": "#675c57",
+                        "on-background": "#dbe6d2",
+                        "error": "#ffb4ab",
+                        "black-stallion": "#0F1E1D",
+                        "surface": "#0d160a",
+                        "background": "#0d160a",
+                        "tertiary": "#e2bfb2",
+                        "outline": "#9a8e89",
+                        "surface-tint": "#d2c3bd",
+                        "on-error": "#690005",
+                        "secondary-fixed-dim": "#ffb4aa",
+                        "on-primary-container": "#473d39",
+                        "on-tertiary-container": "#523a30",
+                        "surface-container": "#192216",
+                        "primary-container": "#b6a8a2",
+                        "tertiary-container": "#c5a497",
+                        "tertiary-fixed": "#ffdbcd",
+                        "on-surface": "#dbe6d2",
+                        "error-container": "#93000a",
+                        "english-breakfast": "#471914",
+                        "inverse-on-surface": "#2a3326",
+                        "walnut": "#3F2920",
+                        "primary": "#d2c3bd",
+                        "outline-variant": "#4e4541",
+                        "on-primary-fixed-variant": "#4f4540",
+                        "on-secondary-container": "#f1a59b",
+                        "on-secondary-fixed": "#370d09",
+                        "on-tertiary-fixed-variant": "#5a4137",
+                        "surface-container-highest": "#2e372a",
+                        "on-secondary-fixed-variant": "#6d3730",
+                        "surface-dim": "#0d160a",
+                        "secondary": "#ffb4aa",
+                        "on-primary": "#382e2a",
+                        "martini": "#B6A8A2",
+                        "surface-bright": "#323c2e",
+                        "surface-container-low": "#151e12",
+                        "on-primary-fixed": "#221a16",
+                        "on-surface-variant": "#d1c4be",
+                        "inverse-surface": "#dbe6d2",
+                        "tertiary-fixed-dim": "#e2bfb2",
+                        "on-tertiary-fixed": "#2a170f",
+                        "surface-variant": "#2e372a",
+                        "on-tertiary": "#412b22"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-md": "16px",
+                        "stack-lg": "32px",
+                        "section-gap": "120px",
+                        "margin-desktop": "64px",
+                        "stack-sm": "8px",
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "quote": ["Playfair Display"],
+                        "label-caps": ["Hanken Grotesk"],
+                        "headline-display": ["Playfair Display"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "body-md": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "headline-md": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "quote": ["24px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "headline-display": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-lg": ["20px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-jedi-night selection:bg-english-breakfast selection:text-martini">
+<!-- TopAppBar -->
+<header class="bg-jedi-night/90 backdrop-blur-md docked full-width top-0 sticky z-50 border-b border-english-breakfast/30">
+<div class="flex flex-col items-center w-full py-6 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<h1 class="font-headline-display text-headline-md tracking-widest text-martini uppercase mb-4">RACHEL GARCIA</h1>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="font-label-caps text-label-caps text-martini border-b border-martini pb-1 transition-all duration-300" href="#">Home</a>
+<a class="font-label-caps text-label-caps text-martini/60 hover:text-martini transition-colors transition-all duration-300" href="#">Books</a>
+<a class="font-label-caps text-label-caps text-martini/60 hover:text-martini transition-colors transition-all duration-300" href="#">Bio</a>
+<a class="font-label-caps text-label-caps text-martini/60 hover:text-martini transition-colors transition-all duration-300" href="#">Events</a>
+<a class="font-label-caps text-label-caps text-martini/60 hover:text-martini transition-colors transition-all duration-300" href="#">Newsletter</a>
+<a class="font-label-caps text-label-caps text-martini/60 hover:text-martini transition-colors transition-all duration-300" href="#">Contact</a>
+</nav>
+<div class="md:hidden flex w-full justify-between items-center">
+<span class="material-symbols-outlined text-martini" data-icon="menu">menu</span>
+<span class="material-symbols-outlined text-martini" data-icon="mail">mail</span>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center justify-center overflow-hidden py-section-gap px-margin-mobile md:px-margin-desktop">
+<div class="absolute inset-0 z-0 opacity-40">
+<div class="absolute inset-0 bg-gradient-to-b from-jedi-night via-transparent to-jedi-night"></div>
+<img class="w-full h-full object-cover" data-alt="Dark landscape atmospheric image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLtzd__TUK2iPv1YsxqE6kJi0bbe97AHZNhsB-f3UcxqkafbbYp1-S7vtGhgeMo3g0xm4-W0eFRcoit9klUvXqWcLwDDP09qUbWH_Anbdr9uYhcZxtp-sBz2tB_dV1JcFu4-TKlsHSZr-3c4FEp7htxjffbkN4kDtxErbFzOa8PFoNCFU8aPZnbyGHsNDo7Ok4iiMwcqo7DSlfQtLZpTaeLCggzwugpfP7e6M8XpYejQThcqLKd3_VrGjr9ccWl-aVM0_14_rnZ6PF"/>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-7 lg:col-span-6 flex flex-col space-y-stack-lg">
+<span class="font-label-caps text-label-caps text-martini tracking-[0.3em] uppercase">Featured Novel</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-martini">AMIDST THE SHADOWS</h2>
+<blockquote class="font-quote text-quote text-on-surface italic border-l-2 border-english-breakfast pl-6 py-2">
+                        "A masterful descent into the mechanics of memory and the darkness we leave behind."
+                    </blockquote>
+<p class="font-body-lg text-body-lg text-on-surface/80 max-w-xl">
+                        Explore the first installment of the epic trilogy where magic, chaos, and morally grey characters collide.
+                    </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="bg-martini text-jedi-night px-8 py-4 font-label-caps text-label-caps hover:bg-english-breakfast hover:text-martini transition-all duration-300">
+                            BUY NOW
+                        </button>
+<button class="border border-martini text-martini px-8 py-4 font-label-caps text-label-caps hover:bg-english-breakfast/20 transition-all duration-300">
+                            LEARN MORE
+                        </button>
+</div>
+</div>
+<div class="md:col-span-5 lg:col-span-6 flex justify-center md:justify-end mt-stack-lg md:mt-0">
+<div class="relative group">
+<div class="absolute -inset-4 bg-walnut/20 blur-3xl rounded-full"></div>
+<img class="relative w-72 md:w-[400px] shadow-2xl transition-transform duration-500 group-hover:scale-[1.02] border border-martini/10" data-alt="Book cover mockup" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLtzd__TUK2iPv1YsxqE6kJi0bbe97AHZNhsB-f3UcxqkafbbYp1-S7vtGhgeMo3g0xm4-W0eFRcoit9klUvXqWcLwDDP09qUbWH_Anbdr9uYhcZxtp-sBz2tB_dV1JcFu4-TKlsHSZr-3c4FEp7htxjffbkN4kDtxErbFzOa8PFoNCFU8aPZnbyGHsNDo7Ok4iiMwcqo7DSlfQtLZpTaeLCggzwugpfP7e6M8XpYejQThcqLKd3_VrGjr9ccWl-aVM0_14_rnZ6PF"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Divider -->
+<div class="w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<hr class="border-english-breakfast/40"/>
+</div>
+<!-- Meet Rachel Section -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+<div class="relative aspect-[4/5] overflow-hidden group">
+<div class="absolute inset-0 bg-jedi-night/20 z-10 group-hover:bg-transparent transition-colors duration-500"></div>
+<img class="w-full h-full object-cover grayscale brightness-75 transition-all duration-700 group-hover:grayscale-0 group-hover:brightness-100" data-alt="Author portrait placeholder" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLtzd__TUK2iPv1YsxqE6kJi0bbe97AHZNhsB-f3UcxqkafbbYp1-S7vtGhgeMo3g0xm4-W0eFRcoit9klUvXqWcLwDDP09qUbWH_Anbdr9uYhcZxtp-sBz2tB_dV1JcFu4-TKlsHSZr-3c4FEp7htxjffbkN4kDtxErbFzOa8PFoNCFU8aPZnbyGHsNDo7Ok4iiMwcqo7DSlfQtLZpTaeLCggzwugpfP7e6M8XpYejQThcqLKd3_VrGjr9ccWl-aVM0_14_rnZ6PF"/>
+</div>
+<div class="space-y-stack-lg">
+<span class="font-label-caps text-label-caps text-tertiary tracking-widest">ABOUT THE AUTHOR</span>
+<h2 class="font-headline-md text-headline-md text-martini">Meet Rachel Garcia</h2>
+<div class="space-y-stack-md font-body-md text-body-md text-on-surface/80">
+<p class="">I am a dark fantasy and fiction author of three fantasy novels within the Amidst The Shadows Trilogy series and as well have authored a historical fiction novella, The Eternal Bargain. These works include characters, tones, and plotlines of grief, witches, demons, humans, magic, chaos, love, morally grey characters, and so much more.</p>
+</div>
+<a class="inline-block border-b border-martini pb-1 font-label-caps text-label-caps text-martini hover:text-tertiary hover:border-tertiary transition-all duration-300" href="#">
+                        FULL BIOGRAPHY
+                    </a>
+</div>
+</div>
+</section>
+<!-- Praise Section (Bento Inspired) -->
+<section class="bg-black-stallion/50 py-section-gap px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<span class="font-label-caps text-label-caps text-tertiary">TESTIMONIALS</span>
+<h2 class="font-headline-md text-headline-md text-martini mt-4">Praise for Rachel's Books</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Column 1 -->
+<div class="space-y-8">
+<div class="bg-black-stallion p-8 border border-martini/10 hover:border-martini/30 transition-colors">
+<span class="material-symbols-outlined text-english-breakfast block mb-6 text-4xl" data-icon="format_quote">format_quote</span>
+<p class="font-quote text-body-lg text-martini italic mb-6">"Garcia’s prose is a razor-sharp instrument, peeling back the layers of her characters' secrets with surgical precision."</p>
+<cite class="font-label-caps text-[10px] text-on-surface/60 uppercase">— The New York Times Book Review</cite>
+</div>
+<div class="bg-walnut/10 p-8 border border-martini/5">
+<p class="font-body-md text-body-md text-on-surface/80 mb-6">"An atmosphere so thick you could carve it. This is Gothic noir at its absolute finest."</p>
+<cite class="font-label-caps text-[10px] text-on-surface/60 uppercase">— Sarah Waters, Author of Fingersmith</cite>
+</div>
+</div>
+<!-- Column 2 (Center - Featured) -->
+<div class="md:mt-12">
+<div class="bg-english-breakfast/10 p-10 border border-martini/20 relative">
+<div class="absolute -top-4 -left-4 bg-martini text-jedi-night p-2 rounded-full">
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill">star</span>
+</div>
+<p class="font-quote text-quote text-martini italic mb-8">"Rachel Garcia doesn't just write mysteries; she constructs intricate, shadow-filled labyrinths that challenge the reader to find their own way out."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-walnut rounded-full overflow-hidden">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLtzd__TUK2iPv1YsxqE6kJi0bbe97AHZNhsB-f3UcxqkafbbYp1-S7vtGhgeMo3g0xm4-W0eFRcoit9klUvXqWcLwDDP09qUbWH_Anbdr9uYhcZxtp-sBz2tB_dV1JcFu4-TKlsHSZr-3c4FEp7htxjffbkN4kDtxErbFzOa8PFoNCFU8aPZnbyGHsNDo7Ok4iiMwcqo7DSlfQtLZpTaeLCggzwugpfP7e6M8XpYejQThcqLKd3_VrGjr9ccWl-aVM0_14_rnZ6PF"/>
+</div>
+<cite class="font-label-caps text-label-caps text-martini uppercase">The Guardian</cite>
+</div>
+</div>
+</div>
+<!-- Column 3 -->
+<div class="space-y-8">
+<div class="bg-black-stallion p-8 border border-martini/10">
+<p class="font-body-md text-body-md text-on-surface/80 mb-6">"A masterclass in tension. I found myself holding my breath more than once."</p>
+<cite class="font-label-caps text-[10px] text-on-surface/60 uppercase">— Publishers Weekly</cite>
+</div>
+<div class="bg-walnut/10 p-8 border border-martini/5">
+<p class="font-quote text-body-lg text-martini italic mb-6">"Her most ambitious and haunting work to date. Simply breathtaking."</p>
+<cite class="font-label-caps text-[10px] text-on-surface/60 uppercase">— Kirkus Reviews</cite>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter CTA -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop text-center max-w-container-max mx-auto">
+<div class="bg-jedi-night border-y border-english-breakfast/30 py-20 px-8">
+<span class="font-label-caps text-label-caps text-martini/60 tracking-[.5em]">STAY ENIGMATIC</span>
+<h2 class="font-headline-md text-headline-md text-martini my-6">Join the Inner Circle</h2>
+<p class="font-body-md text-body-md text-on-surface/70 max-w-lg mx-auto mb-10">Receive exclusive short stories, research notes from the archives, and first looks at upcoming releases.</p>
+<form class="max-w-md mx-auto flex flex-col md:flex-row gap-4">
+<input class="flex-grow bg-transparent border-b border-martini/30 text-martini placeholder:text-martini/40 focus:outline-none focus:border-tertiary py-2 font-body-md" placeholder="Email Address" type="email"/>
+<button class="bg-martini text-jedi-night px-8 py-3 font-label-caps text-label-caps hover:bg-english-breakfast hover:text-martini transition-all duration-300">
+                        SUBSCRIBE
+                    </button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-jedi-night border-t border-english-breakfast/20">
+<div class="flex flex-col md:flex-row justify-between items-center py-stack-lg px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto space-y-stack-md md:space-y-0">
+<div class="flex flex-col items-center md:items-start space-y-2">
+<span class="font-headline-md text-martini tracking-widest text-xl">RACHEL GARCIA</span>
+<div class="flex items-center gap-2 mt-1">
+<span class="material-symbols-outlined text-martini/50 text-sm">alternate_email</span>
+<a class="font-body-md text-sm text-martini/50 hover:text-secondary" href="https://instagram.com/rachel.likes.coffee" target="_blank">@rachel.likes.coffee</a>
+</div>
+<p class="font-body-md text-xs text-martini/50 mt-2">© 2024 Rachel Garcia. All Rights Reserved.</p>
+</div>
+<div class="flex gap-8">
+<a class="font-label-caps text-label-caps text-martini/50 hover:text-secondary transition-colors" href="#">Privacy Policy</a>
+<a class="font-label-caps text-label-caps text-martini/50 hover:text-secondary transition-colors" href="#">Terms of Service</a>
+<a class="font-label-caps text-label-caps text-martini/50 hover:text-secondary transition-colors" href="#">Mailing List</a>
+</div>
+<div class="flex gap-6">
+<a class="text-martini/50 hover:text-secondary hover:scale-110 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</a>
+<a class="text-martini/50 hover:text-secondary hover:scale-110 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="book">book</span>
+</a>
+<a class="text-martini/50 hover:text-secondary hover:scale-110 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="rss_feed">rss_feed</span>
+</a>
+</div>
+</div>
+</footer>
+</body></html>
